@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Classes em JavaScript da forma correta
+        class Animal{
+            constructor(nome) {
+                this.nome = nome;
+            }
+            imprimeNome(){
+                return this.nome;
+            }
+        }
+        
+        class Cachorro extends Animal{
+            constructor(nome){
+                super(nome);
+                this.raca = "labrador";
+            }
+            imprimeRaca(){
+                return this.raca;
+            }    
+        }
+
+        objAnimal = new Animal('Theo');
+        console.log(objAnimal.imprimeNome());
+
+        objCachorro = new Cachorro('Miley');
+        console.log(objCachorro.nome +" | "+objCachorro.raca);
+    </script>
+</body>
+</html>

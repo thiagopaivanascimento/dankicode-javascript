@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Classe Pessoa
+        function Pessoa(){
+            //Atributos
+            this.nome = 'Thiago';
+            this.idade = 30
+            this.profissao = prompt("Sua profissão:");
+            //Métodos
+            this.imprimeNome = function() {
+                return this.nome;
+            }
+            this.imprimeIdade = function() {
+                return this.idade;
+            }
+            this.imprimeProfissao = function(){
+                return this.profissao;
+            }
+
+        }
+
+        //Crio o objeto Pessoa
+        let objPessoa = new Pessoa();
+        console.log("Nome: "+objPessoa.imprimeNome());
+        console.log("Idade: "+objPessoa.imprimeIdade());
+        console.log("Profissão: "+objPessoa.imprimeProfissao());
+
+        //Criand objeto pessoa 2
+        var objPessoa2 = new Pessoa();
+        objPessoa2.nome = 'Tati';
+        objPessoa2.idade = 28;
+        objPessoa2.idade = prompt("Profissão 2:");
+
+        console.log(objPessoa2.nome + objPessoa2.idade + objPessoa2.profissao);
+    </script>
+</body>
+</html>

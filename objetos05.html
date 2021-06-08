@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Trabalhando com datas
+        //let date = new Date();
+        let date = new Date('08/06/2021'); //Teste para calcular diferença de dias
+        console.log(date); //data atual
+        console.log(date.getDate()); //dia do mês
+        console.log(date.getDay()); //Dia da semana 0 - Domingo a 6 - sábado
+        console.log(date.getFullYear()); //Ano
+        console.log(date.getHours());//Hora
+        console.log(date.getMonth()); //Mês
+        console.log(date.getTime());
+
+        let dataBR = new Date('08/10/2021');
+        console.log(dataBR.getDate()); //pegando mês
+        //console.log(dataBR);
+
+        /*
+        1000 - 1s
+        3600 - Segundos em 1hora
+        24 - 1 dia
+        Diferença em Transformar em dias 
+        */
+        let diferenca = (dataBR.getTime() - date.getTime()) / (1000 * 3600 *24);
+        console.log(diferenca);
+    </script>
+</body>
+</html>

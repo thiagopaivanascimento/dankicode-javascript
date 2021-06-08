@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora - JS</title>
+</head>
+<body>
+    <script>
+        //Aplicação de calculadora dinâmica
+        //Queremos um número inicial
+        //Queremos um sinal (tipo de operação)
+        //Quero um número final
+        var numeroInicial = prompt("Informe o primeiro número...");
+        console.log("Primeiro valor: "+numeroInicial);
+        var numeroFinal = prompt("Informe o segundo número...");
+        console.log("Segundo valor: "+numeroFinal);
+        var operacao = prompt("Informe a operação:\n [+]SOMA\n [-]SUBTRAÇÃO\n [*]MULTIPLICAÇÃO\n [/]DIVISÃO\n [%]MÓDULO\n");
+            while(operacao != '+' && operacao != '-' && operacao != '*' && operacao != '/' && operacao != '%') {
+                alert("Favor, informe a operação válida")
+                var operacao = prompt("Informe a operação:\n [+]SOMA\n [-]SUBTRAÇÃO\n [*]MULTIPLICAÇÃO\n [/]DIVISÃO\n [%]MÓDULO\n");
+            }
+
+        console.log("Operação escolhida: "+operacao);
+        
+        //Converter a string para inteiro, para que o prompt entenda que são números
+        numeroInicial = parseInt(numeroInicial);
+        numeroFinal = parseInt(numeroFinal);
+        var resultado = 0;
+        
+        //Verificar se for dividido por Zero
+        if (operacao == '/' && numeroFinal == 0) {
+            alert("Número não pode ser dividido por Zero[0]...\nPrograma encerrado!");
+        }
+
+        //Fazer as operações
+        switch(operacao) {
+
+            case "+": 
+                resultado = (numeroInicial + numeroFinal);
+                break;
+            case "-": 
+                resultado = (numeroInicial - numeroFinal);
+                break;
+            case "*": 
+                resultado = (numeroInicial * numeroFinal);
+                break;
+            case "/": 
+                resultado = (numeroInicial / numeroFinal);
+                break;
+            case "%": 
+                resultado = (numeroInicial % numeroFinal);
+                break;
+            default: 
+                alert("Não houve operação");
+                break;
+        }
+
+        console.log("O resultado final é: "+resultado);
+
+
+    </script>
+</body>
+</html>
