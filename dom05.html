@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style type="text/css">
+
+        .box {
+            width: 100px;
+            height: 100px;
+            border: 1px solid #000;
+            background-color: aquamarine;
+        }
+
+        .animeParaDireita {
+            transition: 1s;
+            margin-left: 200px;
+            margin-top: 150px;
+            background-color: blueviolet;
+        }
+
+        .animeParaEsquerda{
+            transition: 1s;
+            margin-top: 0px;
+            margin-left: 0px;
+            background-color: aquamarine;
+        }
+
+        h3{
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+        
+        div.noticia h3 span {
+            cursor: pointer;
+            margin-left: 5px;
+            font-size: 12px;
+            /*text-decoration: underline;*/
+        }
+        div.texto{
+            overflow: hidden;
+            height: 18px;
+            transition:1s;
+        }
+        div.mostrar{
+            /*transition: 1s;*/
+            height: 500px !important;
+        }
+    </style>
+
+</head>
+    
+<body>
+    <div class="box"></div>
+
+    <div class="noticia">
+        <h3>Título Notícia<span>Ver mais [+]</span></h3>
+        <div class="texto">
+            O Lorem Ipsum é um texto modelo da indústria tipográfica e de impressão. O Lorem Ipsum tem vindo a ser o texto padrão usado por estas indústrias desde o ano de 1500, quando uma misturou os caracteres de um texto para criar um espécime de livro. Este texto não só sobreviveu 5 séculos, mas também o salto para a tipografia electrónica, mantendo-se essencialmente inalterada. Foi popularizada nos anos 60 com a disponibilização das folhas de Letraset, que continham passagens com Lorem Ipsum, e mais recentemente com os programas de publicação como o Aldus PageMaker que incluem versões do Lorem Ipsum. 
+        </div>
+    </div>
+<script src="_js/script05.js"></script>
+</body>
+</html>
